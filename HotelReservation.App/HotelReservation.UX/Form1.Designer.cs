@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
-            btnSignin = new Button();
+            btnLogin = new Button();
             label2 = new Label();
             label1 = new Label();
             txtPassword = new TextBox();
-            txtLogin = new TextBox();
+            txtUsername = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -44,11 +44,11 @@
             // 
             panel1.BackColor = Color.FromArgb(200, 209, 217);
             panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(btnSignin);
+            panel1.Controls.Add(btnLogin);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(txtPassword);
-            panel1.Controls.Add(txtLogin);
+            panel1.Controls.Add(txtUsername);
             panel1.Location = new Point(224, 43);
             panel1.Name = "panel1";
             panel1.Size = new Size(475, 514);
@@ -67,18 +67,18 @@
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 
-            // btnSignin
+            // btnLogin
             // 
-            btnSignin.BackColor = Color.FromArgb(28, 100, 236);
-            btnSignin.FlatStyle = FlatStyle.Popup;
-            btnSignin.Font = new Font("Constantia", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSignin.ForeColor = SystemColors.ControlLightLight;
-            btnSignin.Location = new Point(163, 436);
-            btnSignin.Name = "btnSignin";
-            btnSignin.Size = new Size(154, 44);
-            btnSignin.TabIndex = 4;
-            btnSignin.Text = "SIGNIN";
-            btnSignin.UseVisualStyleBackColor = false;
+            btnLogin.BackColor = Color.FromArgb(28, 100, 236);
+            btnLogin.FlatStyle = FlatStyle.Popup;
+            btnLogin.Font = new Font("Constantia", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogin.ForeColor = SystemColors.ControlLightLight;
+            btnLogin.Location = new Point(159, 436);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(154, 43);
+            btnLogin.TabIndex = 4;
+            btnLogin.Text = "LOGIN";
+            btnLogin.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -96,9 +96,9 @@
             label1.Font = new Font("Constantia", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(63, 257);
             label1.Name = "label1";
-            label1.Size = new Size(65, 24);
+            label1.Size = new Size(108, 24);
             label1.TabIndex = 2;
-            label1.Text = "Login";
+            label1.Text = "Username";
             // 
             // txtPassword
             // 
@@ -108,13 +108,13 @@
             txtPassword.Size = new Size(357, 39);
             txtPassword.TabIndex = 1;
             // 
-            // txtLogin
+            // txtUsername
             // 
-            txtLogin.Font = new Font("Consolas", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtLogin.Location = new Point(63, 284);
-            txtLogin.Name = "txtLogin";
-            txtLogin.Size = new Size(357, 39);
-            txtLogin.TabIndex = 0;
+            txtUsername.Font = new Font("Consolas", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUsername.Location = new Point(63, 284);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(357, 39);
+            txtUsername.TabIndex = 0;
             // 
             // frmLogin
             // 
@@ -125,6 +125,7 @@
             Controls.Add(panel1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmLogin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login Page";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -135,9 +136,9 @@
         #endregion
 
         private Panel panel1;
-        private TextBox txtLogin;
+        private TextBox txtUsername;
         private PictureBox pictureBox1;
-        private Button btnSignin;
+        private Button btnLogin;
         private Label label2;
         private Label label1;
         private TextBox txtPassword;

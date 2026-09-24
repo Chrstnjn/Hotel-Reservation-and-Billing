@@ -33,9 +33,9 @@
             label1 = new Label();
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
-            button1 = new Button();
-            btnMayAccount = new Button();
-            btnManagement = new Button();
+            btnLogout = new Button();
+            btnMyAccount = new Button();
+            btnBookings = new Button();
             label2 = new Label();
             btnDashboard = new Button();
             panel2.SuspendLayout();
@@ -79,9 +79,9 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(19, 52, 113);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(btnMayAccount);
-            panel1.Controls.Add(btnManagement);
+            panel1.Controls.Add(btnLogout);
+            panel1.Controls.Add(btnMyAccount);
+            panel1.Controls.Add(btnBookings);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(btnDashboard);
             panel1.Location = new Point(1, 62);
@@ -89,44 +89,44 @@
             panel1.Size = new Size(192, 540);
             panel1.TabIndex = 2;
             // 
-            // button1
+            // btnLogout
             // 
-            button1.BackColor = Color.FromArgb(213, 64, 64);
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Franklin Gothic Book", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = SystemColors.ControlLightLight;
-            button1.Location = new Point(52, 501);
-            button1.Name = "button1";
-            button1.Size = new Size(87, 25);
-            button1.TabIndex = 8;
-            button1.Text = "LOGOUT";
-            button1.UseVisualStyleBackColor = false;
+            btnLogout.BackColor = Color.FromArgb(213, 64, 64);
+            btnLogout.FlatStyle = FlatStyle.Popup;
+            btnLogout.Font = new Font("Franklin Gothic Book", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogout.ForeColor = SystemColors.ControlLightLight;
+            btnLogout.Location = new Point(52, 501);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(87, 25);
+            btnLogout.TabIndex = 9;
+            btnLogout.Text = "LOGOUT";
+            btnLogout.UseVisualStyleBackColor = false;
             // 
-            // btnMayAccount
+            // btnMyAccount
             // 
-            btnMayAccount.BackColor = Color.FromArgb(48, 91, 171);
-            btnMayAccount.FlatStyle = FlatStyle.Popup;
-            btnMayAccount.Font = new Font("Franklin Gothic Book", 7.8F, FontStyle.Bold);
-            btnMayAccount.ForeColor = SystemColors.ControlLightLight;
-            btnMayAccount.Location = new Point(20, 158);
-            btnMayAccount.Name = "btnMayAccount";
-            btnMayAccount.Size = new Size(152, 35);
-            btnMayAccount.TabIndex = 6;
-            btnMayAccount.Text = "MY ACCOUNT";
-            btnMayAccount.UseVisualStyleBackColor = false;
+            btnMyAccount.BackColor = Color.FromArgb(48, 91, 171);
+            btnMyAccount.FlatStyle = FlatStyle.Popup;
+            btnMyAccount.Font = new Font("Franklin Gothic Book", 7.8F, FontStyle.Bold);
+            btnMyAccount.ForeColor = SystemColors.ControlLightLight;
+            btnMyAccount.Location = new Point(20, 158);
+            btnMyAccount.Name = "btnMyAccount";
+            btnMyAccount.Size = new Size(152, 35);
+            btnMyAccount.TabIndex = 6;
+            btnMyAccount.Text = "MY ACCOUNT";
+            btnMyAccount.UseVisualStyleBackColor = false;
             // 
-            // btnManagement
+            // btnBookings
             // 
-            btnManagement.BackColor = Color.FromArgb(48, 91, 171);
-            btnManagement.FlatStyle = FlatStyle.Popup;
-            btnManagement.Font = new Font("Franklin Gothic Book", 7.8F, FontStyle.Bold);
-            btnManagement.ForeColor = SystemColors.ControlLightLight;
-            btnManagement.Location = new Point(20, 107);
-            btnManagement.Name = "btnManagement";
-            btnManagement.Size = new Size(152, 35);
-            btnManagement.TabIndex = 7;
-            btnManagement.Text = "BOOKINGS";
-            btnManagement.UseVisualStyleBackColor = false;
+            btnBookings.BackColor = Color.FromArgb(48, 91, 171);
+            btnBookings.FlatStyle = FlatStyle.Popup;
+            btnBookings.Font = new Font("Franklin Gothic Book", 7.8F, FontStyle.Bold);
+            btnBookings.ForeColor = SystemColors.ControlLightLight;
+            btnBookings.Location = new Point(20, 107);
+            btnBookings.Name = "btnBookings";
+            btnBookings.Size = new Size(152, 35);
+            btnBookings.TabIndex = 7;
+            btnBookings.Text = "BOOKINGS";
+            btnBookings.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -160,7 +160,8 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "frmReceptionistDashboard";
-            Text = "frmReceptionistDashboard";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Receptionist Dashboard";
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -175,10 +176,10 @@
         private Label label1;
         private PictureBox pictureBox1;
         private Panel panel1;
-        private Button button1;
-        private Button btnMayAccount;
-        private Button btnManagement;
+        private Button btnMyAccount;
+        private Button btnBookings;
         private Label label2;
         private Button btnDashboard;
+        private Button btnLogout;
     }
 }
