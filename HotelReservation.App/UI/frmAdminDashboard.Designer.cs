@@ -42,7 +42,7 @@
             btnHrDetails = new Button();
             btnTotalBooked = new Button();
             btnTotalRoom = new Button();
-            txtUsername = new TextBox();
+            txtSearch = new TextBox();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
@@ -71,9 +71,10 @@
             panel1.Controls.Add(btnManagement);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(btnHome);
-            panel1.Location = new Point(1, 62);
+            panel1.Location = new Point(1, 46);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(192, 540);
+            panel1.Size = new Size(168, 405);
             panel1.TabIndex = 0;
             // 
             // btnLogout
@@ -82,9 +83,10 @@
             btnLogout.FlatStyle = FlatStyle.Popup;
             btnLogout.Font = new Font("Franklin Gothic Book", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogout.ForeColor = SystemColors.ControlLightLight;
-            btnLogout.Location = new Point(52, 501);
+            btnLogout.Location = new Point(46, 372);
+            btnLogout.Margin = new Padding(3, 2, 3, 2);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(87, 25);
+            btnLogout.Size = new Size(76, 23);
             btnLogout.TabIndex = 8;
             btnLogout.Text = "LOGOUT";
             btnLogout.UseVisualStyleBackColor = false;
@@ -95,9 +97,10 @@
             btnMyAccount.FlatStyle = FlatStyle.Popup;
             btnMyAccount.Font = new Font("Franklin Gothic Book", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMyAccount.ForeColor = SystemColors.ControlLightLight;
-            btnMyAccount.Location = new Point(20, 158);
+            btnMyAccount.Location = new Point(18, 118);
+            btnMyAccount.Margin = new Padding(3, 2, 3, 2);
             btnMyAccount.Name = "btnMyAccount";
-            btnMyAccount.Size = new Size(152, 35);
+            btnMyAccount.Size = new Size(133, 26);
             btnMyAccount.TabIndex = 6;
             btnMyAccount.Text = "MY ACCOUNT";
             btnMyAccount.UseVisualStyleBackColor = false;
@@ -108,9 +111,10 @@
             btnManagement.FlatStyle = FlatStyle.Popup;
             btnManagement.Font = new Font("Franklin Gothic Book", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnManagement.ForeColor = SystemColors.ControlLightLight;
-            btnManagement.Location = new Point(20, 107);
+            btnManagement.Location = new Point(18, 80);
+            btnManagement.Margin = new Padding(3, 2, 3, 2);
             btnManagement.Name = "btnManagement";
-            btnManagement.Size = new Size(152, 35);
+            btnManagement.Size = new Size(133, 26);
             btnManagement.TabIndex = 7;
             btnManagement.Text = "MANAGEMENT";
             btnManagement.UseVisualStyleBackColor = false;
@@ -120,9 +124,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Constantia", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(101, 138, 208);
-            label2.Location = new Point(11, 21);
+            label2.Location = new Point(10, 16);
             label2.Name = "label2";
-            label2.Size = new Size(74, 15);
+            label2.Size = new Size(65, 13);
             label2.TabIndex = 6;
             label2.Text = "Navigation";
             // 
@@ -132,9 +136,10 @@
             btnHome.FlatStyle = FlatStyle.Popup;
             btnHome.Font = new Font("Franklin Gothic Book", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnHome.ForeColor = SystemColors.ControlLightLight;
-            btnHome.Location = new Point(20, 57);
+            btnHome.Location = new Point(18, 43);
+            btnHome.Margin = new Padding(3, 2, 3, 2);
             btnHome.Name = "btnHome";
-            btnHome.Size = new Size(152, 35);
+            btnHome.Size = new Size(133, 26);
             btnHome.TabIndex = 5;
             btnHome.Text = "HOME";
             btnHome.UseVisualStyleBackColor = false;
@@ -146,8 +151,9 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.InitialImage = (Image)resources.GetObject("pictureBox1.InitialImage");
             pictureBox1.Location = new Point(3, -2);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(196, 66);
+            pictureBox1.Size = new Size(172, 50);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
@@ -157,27 +163,29 @@
             panel2.BackColor = Color.FromArgb(215, 218, 224);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(pictureBox1);
-            panel2.Location = new Point(-6, 0);
+            panel2.Location = new Point(-5, 0);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(920, 64);
+            panel2.Size = new Size(805, 48);
             panel2.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Constantia", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(205, 18);
+            label1.Location = new Point(179, 14);
             label1.Name = "label1";
-            label1.Size = new Size(212, 28);
+            label1.Size = new Size(175, 23);
             label1.TabIndex = 3;
             label1.Text = "Admin Dashboard";
             // 
             // lstOverview
             // 
             lstOverview.FormattingEnabled = true;
-            lstOverview.Location = new Point(209, 203);
+            lstOverview.Location = new Point(183, 152);
+            lstOverview.Margin = new Padding(3, 2, 3, 2);
             lstOverview.Name = "lstOverview";
-            lstOverview.Size = new Size(693, 384);
+            lstOverview.Size = new Size(607, 289);
             lstOverview.TabIndex = 2;
             // 
             // btnHrDetails
@@ -185,9 +193,10 @@
             btnHrDetails.BackColor = Color.White;
             btnHrDetails.Font = new Font("Franklin Gothic Book", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnHrDetails.ForeColor = SystemColors.ActiveCaptionText;
-            btnHrDetails.Location = new Point(209, 83);
+            btnHrDetails.Location = new Point(183, 62);
+            btnHrDetails.Margin = new Padding(3, 2, 3, 2);
             btnHrDetails.Name = "btnHrDetails";
-            btnHrDetails.Size = new Size(225, 58);
+            btnHrDetails.Size = new Size(197, 44);
             btnHrDetails.TabIndex = 6;
             btnHrDetails.UseVisualStyleBackColor = false;
             // 
@@ -196,9 +205,10 @@
             btnTotalBooked.BackColor = Color.White;
             btnTotalBooked.Font = new Font("Franklin Gothic Book", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnTotalBooked.ForeColor = SystemColors.ControlLightLight;
-            btnTotalBooked.Location = new Point(677, 83);
+            btnTotalBooked.Location = new Point(592, 62);
+            btnTotalBooked.Margin = new Padding(3, 2, 3, 2);
             btnTotalBooked.Name = "btnTotalBooked";
-            btnTotalBooked.Size = new Size(225, 58);
+            btnTotalBooked.Size = new Size(197, 44);
             btnTotalBooked.TabIndex = 7;
             btnTotalBooked.UseVisualStyleBackColor = false;
             // 
@@ -207,19 +217,21 @@
             btnTotalRoom.BackColor = Color.White;
             btnTotalRoom.Font = new Font("Franklin Gothic Book", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnTotalRoom.ForeColor = SystemColors.ControlLightLight;
-            btnTotalRoom.Location = new Point(446, 83);
+            btnTotalRoom.Location = new Point(390, 62);
+            btnTotalRoom.Margin = new Padding(3, 2, 3, 2);
             btnTotalRoom.Name = "btnTotalRoom";
-            btnTotalRoom.Size = new Size(225, 58);
+            btnTotalRoom.Size = new Size(197, 44);
             btnTotalRoom.TabIndex = 8;
             btnTotalRoom.UseVisualStyleBackColor = false;
             // 
-            // txtUsername
+            // txtSearch
             // 
-            txtUsername.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsername.Location = new Point(541, 158);
-            txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(278, 31);
-            txtUsername.TabIndex = 9;
+            txtSearch.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtSearch.Location = new Point(470, 118);
+            txtSearch.Margin = new Padding(3, 2, 3, 2);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(247, 26);
+            txtSearch.TabIndex = 9;
             // 
             // pictureBox2
             // 
@@ -228,9 +240,10 @@
             pictureBox2.ErrorImage = null;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.InitialImage = (Image)resources.GetObject("pictureBox2.InitialImage");
-            pictureBox2.Location = new Point(212, 88);
+            pictureBox2.Location = new Point(186, 66);
+            pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(52, 48);
+            pictureBox2.Size = new Size(46, 36);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 7;
             pictureBox2.TabStop = false;
@@ -242,9 +255,10 @@
             pictureBox3.ErrorImage = null;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.InitialImage = (Image)resources.GetObject("pictureBox3.InitialImage");
-            pictureBox3.Location = new Point(449, 88);
+            pictureBox3.Location = new Point(393, 66);
+            pictureBox3.Margin = new Padding(3, 2, 3, 2);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(52, 48);
+            pictureBox3.Size = new Size(46, 36);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 11;
             pictureBox3.TabStop = false;
@@ -256,9 +270,10 @@
             pictureBox4.ErrorImage = null;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
             pictureBox4.InitialImage = (Image)resources.GetObject("pictureBox4.InitialImage");
-            pictureBox4.Location = new Point(680, 88);
+            pictureBox4.Location = new Point(595, 66);
+            pictureBox4.Margin = new Padding(3, 2, 3, 2);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(52, 48);
+            pictureBox4.Size = new Size(46, 36);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 12;
             pictureBox4.TabStop = false;
@@ -269,9 +284,9 @@
             lblHrDetails.BackColor = Color.White;
             lblHrDetails.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblHrDetails.ForeColor = Color.FromArgb(19, 52, 113);
-            lblHrDetails.Location = new Point(276, 107);
+            lblHrDetails.Location = new Point(242, 80);
             lblHrDetails.Name = "lblHrDetails";
-            lblHrDetails.Size = new Size(22, 25);
+            lblHrDetails.Size = new Size(18, 20);
             lblHrDetails.TabIndex = 14;
             lblHrDetails.Text = "0";
             // 
@@ -281,9 +296,9 @@
             label6.BackColor = Color.White;
             label6.Font = new Font("Constantia", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.FromArgb(102, 108, 130);
-            label6.Location = new Point(266, 91);
+            label6.Location = new Point(233, 68);
             label6.Name = "label6";
-            label6.Size = new Size(158, 15);
+            label6.Size = new Size(135, 13);
             label6.TabIndex = 17;
             label6.Text = "RESEPTIONIST DETAILS";
             // 
@@ -293,9 +308,9 @@
             label7.BackColor = Color.White;
             label7.Font = new Font("Constantia", 7.8F, FontStyle.Bold);
             label7.ForeColor = Color.FromArgb(102, 108, 130);
-            label7.Location = new Point(503, 91);
+            label7.Location = new Point(440, 68);
             label7.Name = "label7";
-            label7.Size = new Size(96, 15);
+            label7.Size = new Size(81, 13);
             label7.TabIndex = 18;
             label7.Text = "TOTAL ROOM";
             // 
@@ -305,9 +320,9 @@
             label8.BackColor = Color.White;
             label8.Font = new Font("Constantia", 7.8F, FontStyle.Bold);
             label8.ForeColor = Color.FromArgb(102, 108, 130);
-            label8.Location = new Point(734, 91);
+            label8.Location = new Point(642, 68);
             label8.Name = "label8";
-            label8.Size = new Size(112, 15);
+            label8.Size = new Size(94, 13);
             label8.TabIndex = 19;
             label8.Text = "TOTAL BOOKED";
             // 
@@ -317,9 +332,9 @@
             lblTotalRoom.BackColor = Color.White;
             lblTotalRoom.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTotalRoom.ForeColor = Color.FromArgb(19, 52, 113);
-            lblTotalRoom.Location = new Point(515, 107);
+            lblTotalRoom.Location = new Point(451, 80);
             lblTotalRoom.Name = "lblTotalRoom";
-            lblTotalRoom.Size = new Size(22, 25);
+            lblTotalRoom.Size = new Size(18, 20);
             lblTotalRoom.TabIndex = 20;
             lblTotalRoom.Text = "0";
             // 
@@ -329,9 +344,9 @@
             lblTotalBooked.BackColor = Color.White;
             lblTotalBooked.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTotalBooked.ForeColor = Color.FromArgb(19, 52, 113);
-            lblTotalBooked.Location = new Point(744, 107);
+            lblTotalBooked.Location = new Point(651, 80);
             lblTotalBooked.Name = "lblTotalBooked";
-            lblTotalBooked.Size = new Size(22, 25);
+            lblTotalBooked.Size = new Size(18, 20);
             lblTotalBooked.TabIndex = 21;
             lblTotalBooked.Text = "0";
             // 
@@ -343,9 +358,10 @@
             btnSearch.Font = new Font("Franklin Gothic Book", 7.8F, FontStyle.Bold);
             btnSearch.ForeColor = SystemColors.ButtonHighlight;
             btnSearch.ImageKey = "(none)";
-            btnSearch.Location = new Point(816, 158);
+            btnSearch.Location = new Point(714, 118);
+            btnSearch.Margin = new Padding(3, 2, 3, 2);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(86, 31);
+            btnSearch.Size = new Size(75, 26);
             btnSearch.TabIndex = 22;
             btnSearch.Text = "SEARCH";
             btnSearch.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -358,18 +374,19 @@
             pictureBox5.ErrorImage = null;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
             pictureBox5.InitialImage = (Image)resources.GetObject("pictureBox5.InitialImage");
-            pictureBox5.Location = new Point(509, 158);
+            pictureBox5.Location = new Point(440, 118);
+            pictureBox5.Margin = new Padding(3, 2, 3, 2);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(34, 31);
+            pictureBox5.Size = new Size(30, 26);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 23;
             pictureBox5.TabStop = false;
             // 
             // frmAdminDashboard
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(800, 450);
             Controls.Add(pictureBox5);
             Controls.Add(btnSearch);
             Controls.Add(lblTotalBooked);
@@ -381,13 +398,14 @@
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
-            Controls.Add(txtUsername);
+            Controls.Add(txtSearch);
             Controls.Add(btnTotalRoom);
             Controls.Add(btnTotalBooked);
             Controls.Add(btnHrDetails);
             Controls.Add(lstOverview);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frmAdminDashboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Admin Dashboard";
@@ -419,7 +437,7 @@
         private Button btnHrDetails;
         private Button btnTotalBooked;
         private Button btnTotalRoom;
-        private TextBox txtUsername;
+        private TextBox txtSearch;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
