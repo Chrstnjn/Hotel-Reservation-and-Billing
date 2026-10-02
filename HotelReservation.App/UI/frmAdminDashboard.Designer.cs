@@ -34,13 +34,33 @@
             btnMyAccount = new Button();
             btnManagement = new Button();
             label2 = new Label();
-            btnDashboard = new Button();
+            btnHome = new Button();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
             label1 = new Label();
+            lstOverview = new ListBox();
+            btnHrDetails = new Button();
+            btnTotalBooked = new Button();
+            btnTotalRoom = new Button();
+            txtUsername = new TextBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            lblHrDetails = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            lblTotalRoom = new Label();
+            lblTotalBooked = new Label();
+            btnSearch = new Button();
+            pictureBox5 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -50,7 +70,7 @@
             panel1.Controls.Add(btnMyAccount);
             panel1.Controls.Add(btnManagement);
             panel1.Controls.Add(label2);
-            panel1.Controls.Add(btnDashboard);
+            panel1.Controls.Add(btnHome);
             panel1.Location = new Point(1, 62);
             panel1.Name = "panel1";
             panel1.Size = new Size(192, 540);
@@ -106,18 +126,18 @@
             label2.TabIndex = 6;
             label2.Text = "Navigation";
             // 
-            // btnDashboard
+            // btnHome
             // 
-            btnDashboard.BackColor = Color.FromArgb(48, 91, 171);
-            btnDashboard.FlatStyle = FlatStyle.Popup;
-            btnDashboard.Font = new Font("Franklin Gothic Book", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDashboard.ForeColor = SystemColors.ControlLightLight;
-            btnDashboard.Location = new Point(20, 57);
-            btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(152, 35);
-            btnDashboard.TabIndex = 5;
-            btnDashboard.Text = "DASHBOARD";
-            btnDashboard.UseVisualStyleBackColor = false;
+            btnHome.BackColor = Color.FromArgb(48, 91, 171);
+            btnHome.FlatStyle = FlatStyle.Popup;
+            btnHome.Font = new Font("Franklin Gothic Book", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnHome.ForeColor = SystemColors.ControlLightLight;
+            btnHome.Location = new Point(20, 57);
+            btnHome.Name = "btnHome";
+            btnHome.Size = new Size(152, 35);
+            btnHome.TabIndex = 5;
+            btnHome.Text = "HOME";
+            btnHome.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -152,11 +172,220 @@
             label1.TabIndex = 3;
             label1.Text = "Admin Dashboard";
             // 
+            // lstOverview
+            // 
+            lstOverview.FormattingEnabled = true;
+            lstOverview.Location = new Point(209, 203);
+            lstOverview.Name = "lstOverview";
+            lstOverview.Size = new Size(693, 384);
+            lstOverview.TabIndex = 2;
+            // 
+            // btnHrDetails
+            // 
+            btnHrDetails.BackColor = Color.White;
+            btnHrDetails.Font = new Font("Franklin Gothic Book", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnHrDetails.ForeColor = SystemColors.ActiveCaptionText;
+            btnHrDetails.Location = new Point(209, 83);
+            btnHrDetails.Name = "btnHrDetails";
+            btnHrDetails.Size = new Size(225, 58);
+            btnHrDetails.TabIndex = 6;
+            btnHrDetails.UseVisualStyleBackColor = false;
+            // 
+            // btnTotalBooked
+            // 
+            btnTotalBooked.BackColor = Color.White;
+            btnTotalBooked.Font = new Font("Franklin Gothic Book", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnTotalBooked.ForeColor = SystemColors.ControlLightLight;
+            btnTotalBooked.Location = new Point(677, 83);
+            btnTotalBooked.Name = "btnTotalBooked";
+            btnTotalBooked.Size = new Size(225, 58);
+            btnTotalBooked.TabIndex = 7;
+            btnTotalBooked.UseVisualStyleBackColor = false;
+            // 
+            // btnTotalRoom
+            // 
+            btnTotalRoom.BackColor = Color.White;
+            btnTotalRoom.Font = new Font("Franklin Gothic Book", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnTotalRoom.ForeColor = SystemColors.ControlLightLight;
+            btnTotalRoom.Location = new Point(446, 83);
+            btnTotalRoom.Name = "btnTotalRoom";
+            btnTotalRoom.Size = new Size(225, 58);
+            btnTotalRoom.TabIndex = 8;
+            btnTotalRoom.UseVisualStyleBackColor = false;
+            // 
+            // txtUsername
+            // 
+            txtUsername.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUsername.Location = new Point(541, 158);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(278, 31);
+            txtUsername.TabIndex = 9;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox2.Cursor = Cursors.SizeNESW;
+            pictureBox2.ErrorImage = null;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.InitialImage = (Image)resources.GetObject("pictureBox2.InitialImage");
+            pictureBox2.Location = new Point(212, 88);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(52, 48);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 7;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox3.Cursor = Cursors.SizeNESW;
+            pictureBox3.ErrorImage = null;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.InitialImage = (Image)resources.GetObject("pictureBox3.InitialImage");
+            pictureBox3.Location = new Point(449, 88);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(52, 48);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 11;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox4.Cursor = Cursors.SizeNESW;
+            pictureBox4.ErrorImage = null;
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.InitialImage = (Image)resources.GetObject("pictureBox4.InitialImage");
+            pictureBox4.Location = new Point(680, 88);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(52, 48);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 12;
+            pictureBox4.TabStop = false;
+            // 
+            // lblHrDetails
+            // 
+            lblHrDetails.AutoSize = true;
+            lblHrDetails.BackColor = Color.White;
+            lblHrDetails.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblHrDetails.ForeColor = Color.FromArgb(19, 52, 113);
+            lblHrDetails.Location = new Point(276, 107);
+            lblHrDetails.Name = "lblHrDetails";
+            lblHrDetails.Size = new Size(22, 25);
+            lblHrDetails.TabIndex = 14;
+            lblHrDetails.Text = "0";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.White;
+            label6.Font = new Font("Constantia", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.FromArgb(102, 108, 130);
+            label6.Location = new Point(266, 91);
+            label6.Name = "label6";
+            label6.Size = new Size(158, 15);
+            label6.TabIndex = 17;
+            label6.Text = "RESEPTIONIST DETAILS";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.White;
+            label7.Font = new Font("Constantia", 7.8F, FontStyle.Bold);
+            label7.ForeColor = Color.FromArgb(102, 108, 130);
+            label7.Location = new Point(503, 91);
+            label7.Name = "label7";
+            label7.Size = new Size(96, 15);
+            label7.TabIndex = 18;
+            label7.Text = "TOTAL ROOM";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.White;
+            label8.Font = new Font("Constantia", 7.8F, FontStyle.Bold);
+            label8.ForeColor = Color.FromArgb(102, 108, 130);
+            label8.Location = new Point(734, 91);
+            label8.Name = "label8";
+            label8.Size = new Size(112, 15);
+            label8.TabIndex = 19;
+            label8.Text = "TOTAL BOOKED";
+            // 
+            // lblTotalRoom
+            // 
+            lblTotalRoom.AutoSize = true;
+            lblTotalRoom.BackColor = Color.White;
+            lblTotalRoom.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalRoom.ForeColor = Color.FromArgb(19, 52, 113);
+            lblTotalRoom.Location = new Point(515, 107);
+            lblTotalRoom.Name = "lblTotalRoom";
+            lblTotalRoom.Size = new Size(22, 25);
+            lblTotalRoom.TabIndex = 20;
+            lblTotalRoom.Text = "0";
+            // 
+            // lblTotalBooked
+            // 
+            lblTotalBooked.AutoSize = true;
+            lblTotalBooked.BackColor = Color.White;
+            lblTotalBooked.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalBooked.ForeColor = Color.FromArgb(19, 52, 113);
+            lblTotalBooked.Location = new Point(744, 107);
+            lblTotalBooked.Name = "lblTotalBooked";
+            lblTotalBooked.Size = new Size(22, 25);
+            lblTotalBooked.TabIndex = 21;
+            lblTotalBooked.Text = "0";
+            // 
+            // btnSearch
+            // 
+            btnSearch.BackColor = Color.FromArgb(48, 91, 171);
+            btnSearch.BackgroundImageLayout = ImageLayout.Zoom;
+            btnSearch.FlatStyle = FlatStyle.Popup;
+            btnSearch.Font = new Font("Franklin Gothic Book", 7.8F, FontStyle.Bold);
+            btnSearch.ForeColor = SystemColors.ButtonHighlight;
+            btnSearch.ImageKey = "(none)";
+            btnSearch.Location = new Point(816, 158);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(86, 31);
+            btnSearch.TabIndex = 22;
+            btnSearch.Text = "SEARCH";
+            btnSearch.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnSearch.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox5.Cursor = Cursors.SizeNESW;
+            pictureBox5.ErrorImage = null;
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.InitialImage = (Image)resources.GetObject("pictureBox5.InitialImage");
+            pictureBox5.Location = new Point(509, 158);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(34, 31);
+            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox5.TabIndex = 23;
+            pictureBox5.TabStop = false;
+            // 
             // frmAdminDashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(914, 600);
+            Controls.Add(pictureBox5);
+            Controls.Add(btnSearch);
+            Controls.Add(lblTotalBooked);
+            Controls.Add(lblTotalRoom);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(lblHrDetails);
+            Controls.Add(pictureBox4);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
+            Controls.Add(txtUsername);
+            Controls.Add(btnTotalRoom);
+            Controls.Add(btnTotalBooked);
+            Controls.Add(btnHrDetails);
+            Controls.Add(lstOverview);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "frmAdminDashboard";
@@ -167,7 +396,12 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -176,10 +410,26 @@
         private Panel panel2;
         private PictureBox pictureBox1;
         private Label label1;
-        private Button btnDashboard;
+        private Button btnHome;
         private Button btnMyAccount;
         private Button btnManagement;
         private Label label2;
         private Button btnLogout;
+        private ListBox lstOverview;
+        private Button btnHrDetails;
+        private Button btnTotalBooked;
+        private Button btnTotalRoom;
+        private TextBox txtUsername;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
+        private Label lblHrDetails;
+        private Label label6;
+        private Label label7;
+        private Label label8;
+        private Label lblTotalRoom;
+        private Label lblTotalBooked;
+        private Button btnSearch;
+        private PictureBox pictureBox5;
     }
 }
