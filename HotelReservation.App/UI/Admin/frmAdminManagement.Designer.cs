@@ -136,6 +136,7 @@
             btnLogout.TabIndex = 9;
             btnLogout.Text = "LOGOUT";
             btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnLogout_Click;
             // 
             // btnMyAccount
             // 
@@ -164,6 +165,7 @@
             btnManagement.TabIndex = 7;
             btnManagement.Text = "MANAGEMENT";
             btnManagement.UseVisualStyleBackColor = false;
+            btnManagement.Click += btnManagement_Click;
             // 
             // label2
             // 
@@ -189,6 +191,7 @@
             btnHome.TabIndex = 5;
             btnHome.Text = "HOME";
             btnHome.UseVisualStyleBackColor = false;
+            btnHome.Click += btnHome_Click;
             // 
             // label12
             // 
@@ -198,9 +201,9 @@
             label12.ForeColor = Color.FromArgb(102, 108, 130);
             label12.Location = new Point(238, 119);
             label12.Name = "label12";
-            label12.Size = new Size(74, 12);
+            label12.Size = new Size(94, 12);
             label12.TabIndex = 109;
-            label12.Text = "Payment proof";
+            label12.Text = "Creating new room";
             // 
             // label13
             // 
@@ -240,6 +243,7 @@
             btnCreateRooms.Size = new Size(204, 74);
             btnCreateRooms.TabIndex = 106;
             btnCreateRooms.UseVisualStyleBackColor = false;
+            btnCreateRooms.Click += btnCreateRooms_Click;
             // 
             // panel5
             // 
@@ -270,9 +274,9 @@
             label3.ForeColor = Color.FromArgb(102, 108, 130);
             label3.Location = new Point(449, 119);
             label3.Name = "label3";
-            label3.Size = new Size(74, 12);
+            label3.Size = new Size(75, 12);
             label3.TabIndex = 113;
-            label3.Text = "Payment proof";
+            label3.Text = "Updating room";
             // 
             // label4
             // 
@@ -312,6 +316,7 @@
             btnUpdateRoom.Size = new Size(204, 74);
             btnUpdateRoom.TabIndex = 110;
             btnUpdateRoom.UseVisualStyleBackColor = false;
+            btnUpdateRoom.Click += btnUpdateRoom_Click;
             // 
             // label6
             // 
@@ -321,9 +326,9 @@
             label6.ForeColor = Color.FromArgb(102, 108, 130);
             label6.Location = new Point(239, 235);
             label6.Name = "label6";
-            label6.Size = new Size(74, 12);
+            label6.Size = new Size(100, 12);
             label6.TabIndex = 117;
-            label6.Text = "Payment proof";
+            label6.Text = "Creating HR account";
             // 
             // label7
             // 
@@ -393,9 +398,9 @@
             label9.ForeColor = Color.FromArgb(102, 108, 130);
             label9.Location = new Point(449, 235);
             label9.Name = "label9";
-            label9.Size = new Size(74, 12);
+            label9.Size = new Size(103, 12);
             label9.TabIndex = 122;
-            label9.Text = "Payment proof";
+            label9.Text = "Updating HR account";
             // 
             // label10
             // 
@@ -444,9 +449,9 @@
             label11.ForeColor = Color.FromArgb(102, 108, 130);
             label11.Location = new Point(659, 236);
             label11.Name = "label11";
-            label11.Size = new Size(74, 12);
+            label11.Size = new Size(119, 12);
             label11.TabIndex = 126;
-            label11.Text = "Payment proof";
+            label11.Text = "Deactivating HR account";
             // 
             // label14
             // 
@@ -456,9 +461,9 @@
             label14.ForeColor = Color.FromArgb(102, 108, 130);
             label14.Location = new Point(656, 217);
             label14.Name = "label14";
-            label14.Size = new Size(134, 14);
+            label14.Size = new Size(79, 14);
             label14.TabIndex = 125;
-            label14.Text = "DELETE HR ACCOUNT";
+            label14.Text = "DEACTIVATE";
             // 
             // pictureBox6
             // 
@@ -517,6 +522,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "frmAdminManagement";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmAdminManagement";
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
