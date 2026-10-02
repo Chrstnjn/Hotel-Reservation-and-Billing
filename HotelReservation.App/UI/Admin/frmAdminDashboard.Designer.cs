@@ -38,7 +38,6 @@
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
             label1 = new Label();
-            lstOverview = new ListBox();
             btnHrDetails = new Button();
             btnTotalBooked = new Button();
             btnTotalRoom = new Button();
@@ -54,6 +53,7 @@
             lblTotalBooked = new Label();
             btnSearch = new Button();
             pictureBox5 = new PictureBox();
+            dvgRoom = new DataGridView();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -61,6 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dvgRoom).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -90,6 +91,7 @@
             btnLogout.TabIndex = 8;
             btnLogout.Text = "LOGOUT";
             btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnLogout_Click;
             // 
             // btnMyAccount
             // 
@@ -118,6 +120,7 @@
             btnManagement.TabIndex = 7;
             btnManagement.Text = "MANAGEMENT";
             btnManagement.UseVisualStyleBackColor = false;
+            btnManagement.Click += btnManagement_Click;
             // 
             // label2
             // 
@@ -178,15 +181,6 @@
             label1.Size = new Size(175, 23);
             label1.TabIndex = 3;
             label1.Text = "Admin Dashboard";
-            // 
-            // lstOverview
-            // 
-            lstOverview.FormattingEnabled = true;
-            lstOverview.Location = new Point(183, 152);
-            lstOverview.Margin = new Padding(3, 2, 3, 2);
-            lstOverview.Name = "lstOverview";
-            lstOverview.Size = new Size(607, 289);
-            lstOverview.TabIndex = 2;
             // 
             // btnHrDetails
             // 
@@ -382,11 +376,21 @@
             pictureBox5.TabIndex = 23;
             pictureBox5.TabStop = false;
             // 
+            // dvgRoom
+            // 
+            dvgRoom.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dvgRoom.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dvgRoom.Location = new Point(183, 164);
+            dvgRoom.Name = "dvgRoom";
+            dvgRoom.Size = new Size(605, 274);
+            dvgRoom.TabIndex = 24;
+            // 
             // frmAdminDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(dvgRoom);
             Controls.Add(pictureBox5);
             Controls.Add(btnSearch);
             Controls.Add(lblTotalBooked);
@@ -402,7 +406,6 @@
             Controls.Add(btnTotalRoom);
             Controls.Add(btnTotalBooked);
             Controls.Add(btnHrDetails);
-            Controls.Add(lstOverview);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Margin = new Padding(3, 2, 3, 2);
@@ -418,6 +421,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dvgRoom).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -449,5 +453,6 @@
         private Label lblTotalBooked;
         private Button btnSearch;
         private PictureBox pictureBox5;
+        private DataGridView dvgRoom;
     }
 }
