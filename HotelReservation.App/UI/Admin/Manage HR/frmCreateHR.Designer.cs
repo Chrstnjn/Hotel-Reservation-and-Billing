@@ -30,6 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCreateHR));
             panel3 = new Panel();
+            panel7 = new Panel();
+            txtPassword = new TextBox();
+            label14 = new Label();
+            txtUsername = new TextBox();
+            dtpBirthDate = new DateTimePicker();
+            label13 = new Label();
+            txtEmail = new TextBox();
+            label12 = new Label();
+            txtMiddle = new TextBox();
+            label11 = new Label();
+            label10 = new Label();
             panel6 = new Panel();
             label9 = new Label();
             btnCreate = new Button();
@@ -55,17 +66,6 @@
             btnManagement = new Button();
             label2 = new Label();
             btnHome = new Button();
-            label10 = new Label();
-            label11 = new Label();
-            txtMiddle = new TextBox();
-            label12 = new Label();
-            txtEmail = new TextBox();
-            label13 = new Label();
-            dtpBirthDate = new DateTimePicker();
-            txtUsername = new TextBox();
-            label14 = new Label();
-            txtPassword = new TextBox();
-            panel7 = new Panel();
             panel3.SuspendLayout();
             panel6.SuspendLayout();
             panel4.SuspendLayout();
@@ -105,6 +105,108 @@
             panel3.Size = new Size(588, 338);
             panel3.TabIndex = 113;
             // 
+            // panel7
+            // 
+            panel7.BackColor = Color.FromArgb(19, 52, 113);
+            panel7.Location = new Point(-16, 221);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(613, 10);
+            panel7.TabIndex = 84;
+            // 
+            // txtPassword
+            // 
+            txtPassword.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPassword.Location = new Point(111, 279);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(166, 25);
+            txtPassword.TabIndex = 83;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Cambria", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label14.ForeColor = Color.FromArgb(64, 64, 64);
+            label14.Location = new Point(14, 284);
+            label14.Name = "label14";
+            label14.Size = new Size(91, 20);
+            label14.TabIndex = 82;
+            label14.Text = "Password:";
+            // 
+            // txtUsername
+            // 
+            txtUsername.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUsername.Location = new Point(111, 244);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(166, 25);
+            txtUsername.TabIndex = 81;
+            // 
+            // dtpBirthDate
+            // 
+            dtpBirthDate.Location = new Point(388, 189);
+            dtpBirthDate.Name = "dtpBirthDate";
+            dtpBirthDate.Size = new Size(186, 23);
+            dtpBirthDate.TabIndex = 80;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Cambria", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.ForeColor = Color.FromArgb(64, 64, 64);
+            label13.Location = new Point(268, 192);
+            label13.Name = "label13";
+            label13.Size = new Size(114, 20);
+            label13.TabIndex = 79;
+            label13.Text = "Date of Birth:";
+            // 
+            // txtEmail
+            // 
+            txtEmail.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtEmail.Location = new Point(310, 109);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(166, 25);
+            txtEmail.TabIndex = 78;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Cambria", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.ForeColor = Color.FromArgb(64, 64, 64);
+            label12.Location = new Point(246, 114);
+            label12.Name = "label12";
+            label12.Size = new Size(58, 20);
+            label12.TabIndex = 77;
+            label12.Text = "Email:";
+            // 
+            // txtMiddle
+            // 
+            txtMiddle.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtMiddle.Location = new Point(523, 143);
+            txtMiddle.Name = "txtMiddle";
+            txtMiddle.Size = new Size(51, 25);
+            txtMiddle.TabIndex = 76;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Cambria", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.ForeColor = Color.FromArgb(64, 64, 64);
+            label11.Location = new Point(477, 149);
+            label11.Name = "label11";
+            label11.Size = new Size(42, 20);
+            label11.TabIndex = 75;
+            label11.Text = "M.I.:";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Cambria", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.ForeColor = Color.FromArgb(64, 64, 64);
+            label10.Location = new Point(246, 149);
+            label10.Name = "label10";
+            label10.Size = new Size(95, 20);
+            label10.TabIndex = 74;
+            label10.Text = "Last Name:";
+            // 
             // panel6
             // 
             panel6.BackColor = Color.FromArgb(19, 52, 113);
@@ -137,6 +239,7 @@
             btnCreate.TabIndex = 72;
             btnCreate.Text = "CREATE";
             btnCreate.UseVisualStyleBackColor = false;
+            btnCreate.Click += btnCreate_Click;
             // 
             // label8
             // 
@@ -167,6 +270,7 @@
             txtPhone.Name = "txtPhone";
             txtPhone.Size = new Size(166, 25);
             txtPhone.TabIndex = 69;
+            txtPhone.KeyPress += txtPhone_KeyPress;
             // 
             // txtLastName
             // 
@@ -236,6 +340,7 @@
             btnLeave.TabIndex = 66;
             btnLeave.Text = "X";
             btnLeave.UseVisualStyleBackColor = false;
+            btnLeave.Click += btnLeave_Click;
             // 
             // label3
             // 
@@ -331,6 +436,7 @@
             btnLogout.TabIndex = 9;
             btnLogout.Text = "LOGOUT";
             btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnLogout_Click;
             // 
             // btnMyAccount
             // 
@@ -359,6 +465,7 @@
             btnManagement.TabIndex = 7;
             btnManagement.Text = "MANAGEMENT";
             btnManagement.UseVisualStyleBackColor = false;
+            btnManagement.Click += btnManagement_Click;
             // 
             // label2
             // 
@@ -384,108 +491,7 @@
             btnHome.TabIndex = 5;
             btnHome.Text = "HOME";
             btnHome.UseVisualStyleBackColor = false;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Cambria", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.ForeColor = Color.FromArgb(64, 64, 64);
-            label10.Location = new Point(246, 149);
-            label10.Name = "label10";
-            label10.Size = new Size(95, 20);
-            label10.TabIndex = 74;
-            label10.Text = "Last Name:";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Cambria", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.ForeColor = Color.FromArgb(64, 64, 64);
-            label11.Location = new Point(477, 149);
-            label11.Name = "label11";
-            label11.Size = new Size(42, 20);
-            label11.TabIndex = 75;
-            label11.Text = "M.I.:";
-            // 
-            // txtMiddle
-            // 
-            txtMiddle.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtMiddle.Location = new Point(523, 143);
-            txtMiddle.Name = "txtMiddle";
-            txtMiddle.Size = new Size(51, 25);
-            txtMiddle.TabIndex = 76;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Cambria", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label12.ForeColor = Color.FromArgb(64, 64, 64);
-            label12.Location = new Point(246, 114);
-            label12.Name = "label12";
-            label12.Size = new Size(58, 20);
-            label12.TabIndex = 77;
-            label12.Text = "Email:";
-            // 
-            // txtEmail
-            // 
-            txtEmail.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtEmail.Location = new Point(310, 109);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(166, 25);
-            txtEmail.TabIndex = 78;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Cambria", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.ForeColor = Color.FromArgb(64, 64, 64);
-            label13.Location = new Point(268, 192);
-            label13.Name = "label13";
-            label13.Size = new Size(114, 20);
-            label13.TabIndex = 79;
-            label13.Text = "Date of Birth:";
-            // 
-            // dtpBirthDate
-            // 
-            dtpBirthDate.Location = new Point(388, 189);
-            dtpBirthDate.Name = "dtpBirthDate";
-            dtpBirthDate.Size = new Size(186, 23);
-            dtpBirthDate.TabIndex = 80;
-            // 
-            // txtUsername
-            // 
-            txtUsername.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsername.Location = new Point(111, 244);
-            txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(166, 25);
-            txtUsername.TabIndex = 81;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Cambria", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.ForeColor = Color.FromArgb(64, 64, 64);
-            label14.Location = new Point(14, 284);
-            label14.Name = "label14";
-            label14.Size = new Size(91, 20);
-            label14.TabIndex = 82;
-            label14.Text = "Password:";
-            // 
-            // txtPassword
-            // 
-            txtPassword.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPassword.Location = new Point(111, 279);
-            txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(166, 25);
-            txtPassword.TabIndex = 83;
-            // 
-            // panel7
-            // 
-            panel7.BackColor = Color.FromArgb(19, 52, 113);
-            panel7.Location = new Point(-16, 221);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(613, 10);
-            panel7.TabIndex = 84;
+            btnHome.Click += btnHome_Click;
             // 
             // frmCreateHR
             // 
@@ -497,6 +503,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "frmCreateHR";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmCreateHR";
             panel3.ResumeLayout(false);
             panel3.PerformLayout();

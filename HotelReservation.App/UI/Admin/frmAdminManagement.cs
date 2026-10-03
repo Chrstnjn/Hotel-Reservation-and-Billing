@@ -55,5 +55,26 @@ namespace HotelReservation.App.UI
             frmUpdateR.Show();
             this.Hide();
         }
+
+        private void btnUpdateHrAccount_Click(object sender, EventArgs e)
+        {
+            frmUpdateHR frmUpdateHR = new frmUpdateHR();
+            frmUpdateHR.Show();
+            this.Hide();
+        }
+
+        private void btnDeleteHrAccount_Click(object sender, EventArgs e)
+        {
+            frmDeactHR frmDeact = new frmDeactHR();
+            frmDeact.Show();
+            this.Hide();
+        }
+
+        private void btnCreateHrAccount_Click(object sender, EventArgs e)
+        {
+            frmCreateHR frmAddHR = new frmCreateHR();
+            frmAddHR.Show();
+            this.Hide();
+        }
     }
 }

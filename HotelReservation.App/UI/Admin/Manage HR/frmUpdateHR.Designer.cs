@@ -50,7 +50,7 @@
             label4 = new Label();
             dgvUpdate = new DataGridView();
             button1 = new Button();
-            btnCreate = new Button();
+            btnUpdate = new Button();
             panel4 = new Panel();
             btnLeave = new Button();
             label3 = new Label();
@@ -97,7 +97,7 @@
             panel3.Controls.Add(label4);
             panel3.Controls.Add(dgvUpdate);
             panel3.Controls.Add(button1);
-            panel3.Controls.Add(btnCreate);
+            panel3.Controls.Add(btnUpdate);
             panel3.Controls.Add(panel4);
             panel3.Location = new Point(191, 89);
             panel3.Name = "panel3";
@@ -111,6 +111,7 @@
             cmbHRID.Name = "cmbHRID";
             cmbHRID.Size = new Size(162, 23);
             cmbHRID.TabIndex = 99;
+            cmbHRID.SelectedIndexChanged += cmbHRID_SelectedIndexChanged;
             // 
             // txtPassword
             // 
@@ -295,19 +296,21 @@
             button1.TabIndex = 74;
             button1.Text = "REFRESH";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // btnCreate
+            // btnUpdate
             // 
-            btnCreate.BackColor = Color.Teal;
-            btnCreate.FlatStyle = FlatStyle.Flat;
-            btnCreate.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCreate.ForeColor = SystemColors.ButtonHighlight;
-            btnCreate.Location = new Point(498, 202);
-            btnCreate.Name = "btnCreate";
-            btnCreate.Size = new Size(76, 22);
-            btnCreate.TabIndex = 72;
-            btnCreate.Text = "UPDATE";
-            btnCreate.UseVisualStyleBackColor = false;
+            btnUpdate.BackColor = Color.Teal;
+            btnUpdate.FlatStyle = FlatStyle.Flat;
+            btnUpdate.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnUpdate.ForeColor = SystemColors.ButtonHighlight;
+            btnUpdate.Location = new Point(498, 202);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(76, 22);
+            btnUpdate.TabIndex = 72;
+            btnUpdate.Text = "UPDATE";
+            btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // panel4
             // 
@@ -331,6 +334,7 @@
             btnLeave.TabIndex = 66;
             btnLeave.Text = "X";
             btnLeave.UseVisualStyleBackColor = false;
+            btnLeave.Click += btnLeave_Click;
             // 
             // label3
             // 
@@ -426,6 +430,7 @@
             btnLogout.TabIndex = 9;
             btnLogout.Text = "LOGOUT";
             btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnLogout_Click;
             // 
             // btnMyAccount
             // 
@@ -454,6 +459,7 @@
             btnManagement.TabIndex = 7;
             btnManagement.Text = "MANAGEMENT";
             btnManagement.UseVisualStyleBackColor = false;
+            btnManagement.Click += btnManagement_Click;
             // 
             // label2
             // 
@@ -479,6 +485,7 @@
             btnHome.TabIndex = 5;
             btnHome.Text = "HOME";
             btnHome.UseVisualStyleBackColor = false;
+            btnHome.Click += btnHome_Click;
             // 
             // frmUpdateHR
             // 
@@ -492,6 +499,7 @@
             Name = "frmUpdateHR";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Admin Management Page";
+            Load += frmUpdateHR_Load;
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvUpdate).EndInit();
@@ -512,7 +520,7 @@
         private Panel panel3;
         private DataGridView dgvUpdate;
         private Button button1;
-        private Button btnCreate;
+        private Button btnUpdate;
         private Panel panel4;
         private Button btnLeave;
         private Label label3;

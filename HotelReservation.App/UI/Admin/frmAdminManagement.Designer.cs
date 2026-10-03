@@ -368,6 +368,7 @@
             btnCreateHrAccount.Size = new Size(204, 74);
             btnCreateHrAccount.TabIndex = 114;
             btnCreateHrAccount.UseVisualStyleBackColor = false;
+            btnCreateHrAccount.Click += btnCreateHrAccount_Click;
             // 
             // panel3
             // 
@@ -440,6 +441,7 @@
             btnUpdateHrAccount.Size = new Size(204, 74);
             btnUpdateHrAccount.TabIndex = 119;
             btnUpdateHrAccount.UseVisualStyleBackColor = false;
+            btnUpdateHrAccount.Click += btnUpdateHrAccount_Click;
             // 
             // label11
             // 
@@ -491,6 +493,7 @@
             btnDeleteHrAccount.Size = new Size(204, 74);
             btnDeleteHrAccount.TabIndex = 123;
             btnDeleteHrAccount.UseVisualStyleBackColor = false;
+            btnDeleteHrAccount.Click += btnDeleteHrAccount_Click;
             // 
             // frmAdminManagement
             // 

@@ -190,6 +190,7 @@
             btnHrDetails.Size = new Size(197, 44);
             btnHrDetails.TabIndex = 6;
             btnHrDetails.UseVisualStyleBackColor = false;
+            btnHrDetails.Click += btnHrDetails_Click;
             // 
             // btnTotalBooked
             // 

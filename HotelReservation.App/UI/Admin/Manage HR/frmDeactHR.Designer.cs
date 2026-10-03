@@ -30,8 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDeactHR));
             panel3 = new Panel();
-            txtHRID = new TextBox();
             dgvDeac = new DataGridView();
+            label4 = new Label();
+            dgvActive = new DataGridView();
+            txtHRID = new TextBox();
             btnDeactivate = new Button();
             btnFind = new Button();
             panel4 = new Panel();
@@ -48,16 +50,14 @@
             btnManagement = new Button();
             label2 = new Label();
             btnHome = new Button();
-            dgvActive = new DataGridView();
-            label4 = new Label();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDeac).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvActive).BeginInit();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvActive).BeginInit();
             SuspendLayout();
             // 
             // panel3
@@ -75,14 +75,6 @@
             panel3.Size = new Size(588, 338);
             panel3.TabIndex = 121;
             // 
-            // txtHRID
-            // 
-            txtHRID.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtHRID.Location = new Point(333, 68);
-            txtHRID.Name = "txtHRID";
-            txtHRID.Size = new Size(166, 25);
-            txtHRID.TabIndex = 92;
-            // 
             // dgvDeac
             // 
             dgvDeac.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -91,6 +83,34 @@
             dgvDeac.Name = "dgvDeac";
             dgvDeac.Size = new Size(588, 102);
             dgvDeac.TabIndex = 75;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Cambria", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.FromArgb(19, 52, 113);
+            label4.Location = new Point(2, 213);
+            label4.Name = "label4";
+            label4.Size = new Size(323, 25);
+            label4.TabIndex = 94;
+            label4.Text = "DEACTIVATE ACCOUNT HISTORY";
+            // 
+            // dgvActive
+            // 
+            dgvActive.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvActive.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvActive.Location = new Point(0, 95);
+            dgvActive.Name = "dgvActive";
+            dgvActive.Size = new Size(588, 102);
+            dgvActive.TabIndex = 93;
+            // 
+            // txtHRID
+            // 
+            txtHRID.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtHRID.Location = new Point(333, 68);
+            txtHRID.Name = "txtHRID";
+            txtHRID.Size = new Size(166, 25);
+            txtHRID.TabIndex = 92;
             // 
             // btnDeactivate
             // 
@@ -104,6 +124,7 @@
             btnDeactivate.TabIndex = 74;
             btnDeactivate.Text = "DEACTIVATE";
             btnDeactivate.UseVisualStyleBackColor = false;
+            btnDeactivate.Click += btnDeactivate_Click;
             // 
             // btnFind
             // 
@@ -117,6 +138,7 @@
             btnFind.TabIndex = 72;
             btnFind.Text = "FIND";
             btnFind.UseVisualStyleBackColor = false;
+            btnFind.Click += btnFind_Click;
             // 
             // panel4
             // 
@@ -140,6 +162,7 @@
             btnLeave.TabIndex = 66;
             btnLeave.Text = "X";
             btnLeave.UseVisualStyleBackColor = false;
+            btnLeave.Click += btnLeave_Click;
             // 
             // label3
             // 
@@ -235,6 +258,7 @@
             btnLogout.TabIndex = 9;
             btnLogout.Text = "LOGOUT";
             btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnLogout_Click;
             // 
             // btnMyAccount
             // 
@@ -263,6 +287,7 @@
             btnManagement.TabIndex = 7;
             btnManagement.Text = "MANAGEMENT";
             btnManagement.UseVisualStyleBackColor = false;
+            btnManagement.Click += btnManagement_Click;
             // 
             // label2
             // 
@@ -288,26 +313,7 @@
             btnHome.TabIndex = 5;
             btnHome.Text = "HOME";
             btnHome.UseVisualStyleBackColor = false;
-            // 
-            // dgvActive
-            // 
-            dgvActive.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvActive.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvActive.Location = new Point(0, 95);
-            dgvActive.Name = "dgvActive";
-            dgvActive.Size = new Size(588, 102);
-            dgvActive.TabIndex = 93;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Cambria", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.FromArgb(19, 52, 113);
-            label4.Location = new Point(2, 213);
-            label4.Name = "label4";
-            label4.Size = new Size(323, 25);
-            label4.TabIndex = 94;
-            label4.Text = "DEACTIVATE ACCOUNT HISTORY";
+            btnHome.Click += btnHome_Click;
             // 
             // frmDeactHR
             // 
@@ -319,10 +325,13 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "frmDeactHR";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Admin Management Page";
+            Load += frmDeactHR_Load;
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDeac).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvActive).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             panel5.ResumeLayout(false);
@@ -332,7 +341,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvActive).EndInit();
             ResumeLayout(false);
         }
 

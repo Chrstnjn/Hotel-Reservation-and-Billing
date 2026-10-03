@@ -45,5 +45,13 @@ namespace HotelReservation.App
             dgvHR.DataSource = null;
             dgvHR.DataSource = controller.GetRooms();
         }
+
+        private void btnHrDetails_Click(object sender, EventArgs e)
+        {
+            ReceptionistAccountController controller = new ReceptionistAccountController();
+
+            dgvHR.DataSource = null;
+            dgvHR.DataSource = controller.GetAllHR();
+        }
     }
 }
