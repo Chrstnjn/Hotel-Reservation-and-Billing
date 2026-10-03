@@ -222,7 +222,7 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(588, 338);
             panel3.TabIndex = 109;
-            panel3.Paint += panel3_Paint;
+
             // 
             // panel6
             // 
@@ -256,6 +256,7 @@
             btnCreate.TabIndex = 72;
             btnCreate.Text = "CREATE";
             btnCreate.UseVisualStyleBackColor = false;
+            btnCreate.Click += btnCreate_Click;
             // 
             // label8
             // 
@@ -367,7 +368,7 @@
             label3.Size = new Size(388, 25);
             label3.TabIndex = 65;
             label3.Text = "ENTER DETAILS TO CREATE THE ROOM";
-            label3.Click += label3_Click;
+     
             // 
             // frmCreateRoom
             // 
@@ -381,7 +382,7 @@
             Name = "frmCreateRoom";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Admin Management Page";
-            Load += frmCreateRooms_Load;
+
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             panel2.ResumeLayout(false);
