@@ -1,6 +1,6 @@
 ﻿namespace HotelReservation.App.UI
 {
-    partial class frmUpdateRoom
+    partial class frmCreateHR
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpdateRoom));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCreateHR));
             panel3 = new Panel();
-            dgvRoomUpdate = new DataGridView();
-            button1 = new Button();
             panel6 = new Panel();
             label9 = new Label();
             btnCreate = new Button();
             label8 = new Label();
             label7 = new Label();
-            txtPrice = new TextBox();
-            txtBedType = new TextBox();
-            txtRoomType = new TextBox();
+            txtPhone = new TextBox();
+            txtLastName = new TextBox();
+            txtFirstName = new TextBox();
             label6 = new Label();
             label4 = new Label();
-            txtRoomNumber = new TextBox();
+            txtHRID = new TextBox();
             panel4 = new Panel();
             btnLeave = new Button();
             label3 = new Label();
@@ -57,8 +55,18 @@
             btnManagement = new Button();
             label2 = new Label();
             btnHome = new Button();
+            label10 = new Label();
+            label11 = new Label();
+            txtMiddle = new TextBox();
+            label12 = new Label();
+            txtEmail = new TextBox();
+            label13 = new Label();
+            dtpBirthDate = new DateTimePicker();
+            txtUsername = new TextBox();
+            label14 = new Label();
+            txtPassword = new TextBox();
+            panel7 = new Panel();
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvRoomUpdate).BeginInit();
             panel6.SuspendLayout();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
@@ -70,45 +78,32 @@
             // panel3
             // 
             panel3.BackColor = Color.LightGray;
-            panel3.Controls.Add(dgvRoomUpdate);
-            panel3.Controls.Add(button1);
+            panel3.Controls.Add(panel7);
+            panel3.Controls.Add(txtPassword);
+            panel3.Controls.Add(label14);
+            panel3.Controls.Add(txtUsername);
+            panel3.Controls.Add(dtpBirthDate);
+            panel3.Controls.Add(label13);
+            panel3.Controls.Add(txtEmail);
+            panel3.Controls.Add(label12);
+            panel3.Controls.Add(txtMiddle);
+            panel3.Controls.Add(label11);
+            panel3.Controls.Add(label10);
             panel3.Controls.Add(panel6);
             panel3.Controls.Add(btnCreate);
             panel3.Controls.Add(label8);
             panel3.Controls.Add(label7);
-            panel3.Controls.Add(txtPrice);
-            panel3.Controls.Add(txtBedType);
-            panel3.Controls.Add(txtRoomType);
+            panel3.Controls.Add(txtPhone);
+            panel3.Controls.Add(txtLastName);
+            panel3.Controls.Add(txtFirstName);
             panel3.Controls.Add(label6);
             panel3.Controls.Add(label4);
-            panel3.Controls.Add(txtRoomNumber);
+            panel3.Controls.Add(txtHRID);
             panel3.Controls.Add(panel4);
             panel3.Location = new Point(191, 89);
             panel3.Name = "panel3";
             panel3.Size = new Size(588, 338);
             panel3.TabIndex = 113;
-            // 
-            // dgvRoomUpdate
-            // 
-            dgvRoomUpdate.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvRoomUpdate.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvRoomUpdate.Location = new Point(0, 211);
-            dgvRoomUpdate.Name = "dgvRoomUpdate";
-            dgvRoomUpdate.Size = new Size(588, 127);
-            dgvRoomUpdate.TabIndex = 75;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(48, 91, 171);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(408, 174);
-            button1.Name = "button1";
-            button1.Size = new Size(79, 31);
-            button1.TabIndex = 74;
-            button1.Text = "REFRESH";
-            button1.UseVisualStyleBackColor = false;
             // 
             // panel6
             // 
@@ -126,21 +121,21 @@
             label9.ForeColor = Color.White;
             label9.Location = new Point(7, 3);
             label9.Name = "label9";
-            label9.Size = new Size(125, 20);
+            label9.Size = new Size(179, 20);
             label9.TabIndex = 74;
-            label9.Text = "UPDATE ROOM";
+            label9.Text = "CREATE HR ACCOUNT";
             // 
             // btnCreate
             // 
-            btnCreate.BackColor = Color.Teal;
+            btnCreate.BackColor = Color.FromArgb(48, 91, 171);
             btnCreate.FlatStyle = FlatStyle.Flat;
             btnCreate.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCreate.ForeColor = SystemColors.ButtonHighlight;
-            btnCreate.Location = new Point(492, 174);
+            btnCreate.Location = new Point(468, 293);
             btnCreate.Name = "btnCreate";
-            btnCreate.Size = new Size(79, 31);
+            btnCreate.Size = new Size(91, 31);
             btnCreate.TabIndex = 72;
-            btnCreate.Text = "UPDATE";
+            btnCreate.Text = "CREATE";
             btnCreate.UseVisualStyleBackColor = false;
             // 
             // label8
@@ -148,76 +143,76 @@
             label8.AutoSize = true;
             label8.Font = new Font("Cambria", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.FromArgb(64, 64, 64);
-            label8.Location = new Point(353, 145);
+            label8.Location = new Point(14, 249);
             label8.Name = "label8";
-            label8.Size = new Size(54, 20);
+            label8.Size = new Size(93, 20);
             label8.TabIndex = 71;
-            label8.Text = "Price:";
+            label8.Text = "Username:";
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Cambria", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.FromArgb(64, 64, 64);
-            label7.Location = new Point(320, 109);
+            label7.Location = new Point(13, 191);
             label7.Name = "label7";
-            label7.Size = new Size(87, 20);
+            label7.Size = new Size(78, 20);
             label7.TabIndex = 70;
-            label7.Text = "Bed Type:";
+            label7.Text = "Number:";
             // 
-            // txtPrice
+            // txtPhone
             // 
-            txtPrice.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPrice.Location = new Point(405, 143);
-            txtPrice.Name = "txtPrice";
-            txtPrice.Size = new Size(166, 25);
-            txtPrice.TabIndex = 69;
+            txtPhone.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPhone.Location = new Point(92, 186);
+            txtPhone.Name = "txtPhone";
+            txtPhone.Size = new Size(166, 25);
+            txtPhone.TabIndex = 69;
             // 
-            // txtBedType
+            // txtLastName
             // 
-            txtBedType.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBedType.Location = new Point(405, 107);
-            txtBedType.Name = "txtBedType";
-            txtBedType.Size = new Size(166, 25);
-            txtBedType.TabIndex = 68;
+            txtLastName.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtLastName.Location = new Point(344, 143);
+            txtLastName.Name = "txtLastName";
+            txtLastName.Size = new Size(127, 25);
+            txtLastName.TabIndex = 68;
             // 
-            // txtRoomType
+            // txtFirstName
             // 
-            txtRoomType.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtRoomType.Location = new Point(148, 141);
-            txtRoomType.Name = "txtRoomType";
-            txtRoomType.Size = new Size(166, 25);
-            txtRoomType.TabIndex = 67;
+            txtFirstName.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtFirstName.Location = new Point(113, 143);
+            txtFirstName.Name = "txtFirstName";
+            txtFirstName.Size = new Size(127, 25);
+            txtFirstName.TabIndex = 67;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Cambria", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.FromArgb(64, 64, 64);
-            label6.Location = new Point(46, 143);
+            label6.Location = new Point(13, 149);
             label6.Name = "label6";
-            label6.Size = new Size(103, 20);
+            label6.Size = new Size(99, 20);
             label6.TabIndex = 66;
-            label6.Text = "Room Type:";
+            label6.Text = "First Name:";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Cambria", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(64, 64, 64);
-            label4.Location = new Point(21, 112);
+            label4.Location = new Point(17, 114);
             label4.Name = "label4";
-            label4.Size = new Size(128, 20);
+            label4.Size = new Size(55, 20);
             label4.TabIndex = 65;
-            label4.Text = "Room Number:";
+            label4.Text = "HRID:";
             // 
-            // txtRoomNumber
+            // txtHRID
             // 
-            txtRoomNumber.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtRoomNumber.Location = new Point(148, 110);
-            txtRoomNumber.Name = "txtRoomNumber";
-            txtRoomNumber.Size = new Size(166, 25);
-            txtRoomNumber.TabIndex = 1;
+            txtHRID.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtHRID.Location = new Point(78, 109);
+            txtHRID.Name = "txtHRID";
+            txtHRID.Size = new Size(98, 25);
+            txtHRID.TabIndex = 1;
             // 
             // panel4
             // 
@@ -241,18 +236,17 @@
             btnLeave.TabIndex = 66;
             btnLeave.Text = "X";
             btnLeave.UseVisualStyleBackColor = false;
-            btnLeave.Click += btnLeave_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Cambria", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(102, 22);
+            label3.Location = new Point(100, 22);
             label3.Name = "label3";
-            label3.Size = new Size(385, 25);
+            label3.Size = new Size(386, 25);
             label3.TabIndex = 65;
-            label3.Text = "INPUT DETAILS YOU WANT TO UPDATE";
+            label3.Text = "ENTER DETAILS YOU WANT TO CREATE";
             // 
             // panel5
             // 
@@ -271,9 +265,9 @@
             label5.ForeColor = Color.FromArgb(64, 64, 64);
             label5.Location = new Point(5, 5);
             label5.Name = "label5";
-            label5.Size = new Size(169, 14);
+            label5.Size = new Size(216, 14);
             label5.TabIndex = 64;
-            label5.Text = "ROOM BOARD MANAGEMENT";
+            label5.Text = "HOTEL RECEPTIONIST MANAGEMENT\r\n";
             // 
             // panel2
             // 
@@ -337,7 +331,6 @@
             btnLogout.TabIndex = 9;
             btnLogout.Text = "LOGOUT";
             btnLogout.UseVisualStyleBackColor = false;
-            btnLogout.Click += btnLogout_Click;
             // 
             // btnMyAccount
             // 
@@ -366,7 +359,6 @@
             btnManagement.TabIndex = 7;
             btnManagement.Text = "MANAGEMENT";
             btnManagement.UseVisualStyleBackColor = false;
-            btnManagement.Click += btnManagement_Click;
             // 
             // label2
             // 
@@ -392,9 +384,110 @@
             btnHome.TabIndex = 5;
             btnHome.Text = "HOME";
             btnHome.UseVisualStyleBackColor = false;
-            btnHome.Click += btnHome_Click;
             // 
-            // frmUpdateRoom
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Cambria", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.ForeColor = Color.FromArgb(64, 64, 64);
+            label10.Location = new Point(246, 149);
+            label10.Name = "label10";
+            label10.Size = new Size(95, 20);
+            label10.TabIndex = 74;
+            label10.Text = "Last Name:";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Cambria", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.ForeColor = Color.FromArgb(64, 64, 64);
+            label11.Location = new Point(477, 149);
+            label11.Name = "label11";
+            label11.Size = new Size(42, 20);
+            label11.TabIndex = 75;
+            label11.Text = "M.I.:";
+            // 
+            // txtMiddle
+            // 
+            txtMiddle.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtMiddle.Location = new Point(523, 143);
+            txtMiddle.Name = "txtMiddle";
+            txtMiddle.Size = new Size(51, 25);
+            txtMiddle.TabIndex = 76;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Cambria", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.ForeColor = Color.FromArgb(64, 64, 64);
+            label12.Location = new Point(246, 114);
+            label12.Name = "label12";
+            label12.Size = new Size(58, 20);
+            label12.TabIndex = 77;
+            label12.Text = "Email:";
+            // 
+            // txtEmail
+            // 
+            txtEmail.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtEmail.Location = new Point(310, 109);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(166, 25);
+            txtEmail.TabIndex = 78;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Cambria", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.ForeColor = Color.FromArgb(64, 64, 64);
+            label13.Location = new Point(268, 192);
+            label13.Name = "label13";
+            label13.Size = new Size(114, 20);
+            label13.TabIndex = 79;
+            label13.Text = "Date of Birth:";
+            // 
+            // dtpBirthDate
+            // 
+            dtpBirthDate.Location = new Point(388, 189);
+            dtpBirthDate.Name = "dtpBirthDate";
+            dtpBirthDate.Size = new Size(186, 23);
+            dtpBirthDate.TabIndex = 80;
+            // 
+            // txtUsername
+            // 
+            txtUsername.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUsername.Location = new Point(111, 244);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(166, 25);
+            txtUsername.TabIndex = 81;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Cambria", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label14.ForeColor = Color.FromArgb(64, 64, 64);
+            label14.Location = new Point(14, 284);
+            label14.Name = "label14";
+            label14.Size = new Size(91, 20);
+            label14.TabIndex = 82;
+            label14.Text = "Password:";
+            // 
+            // txtPassword
+            // 
+            txtPassword.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPassword.Location = new Point(111, 279);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(166, 25);
+            txtPassword.TabIndex = 83;
+            // 
+            // panel7
+            // 
+            panel7.BackColor = Color.FromArgb(19, 52, 113);
+            panel7.Location = new Point(-16, 221);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(613, 10);
+            panel7.TabIndex = 84;
+            // 
+            // frmCreateHR
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -403,12 +496,10 @@
             Controls.Add(panel5);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Name = "frmUpdateRoom";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Admin Management Page";
+            Name = "frmCreateHR";
+            Text = "frmCreateHR";
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvRoomUpdate).EndInit();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             panel4.ResumeLayout(false);
@@ -431,12 +522,12 @@
         private Button btnCreate;
         private Label label8;
         private Label label7;
-        private TextBox txtPrice;
-        private TextBox txtBedType;
-        private TextBox txtRoomType;
+        private TextBox txtPhone;
+        private TextBox txtLastName;
+        private TextBox txtFirstName;
         private Label label6;
         private Label label4;
-        private TextBox txtRoomNumber;
+        private TextBox txtHRID;
         private Panel panel4;
         private Button btnLeave;
         private Label label3;
@@ -451,7 +542,16 @@
         private Button btnManagement;
         private Label label2;
         private Button btnHome;
-        private Button button1;
-        private DataGridView dgvRoomUpdate;
+        private TextBox txtMiddle;
+        private Label label11;
+        private Label label10;
+        private Panel panel7;
+        private TextBox txtPassword;
+        private Label label14;
+        private TextBox txtUsername;
+        private DateTimePicker dtpBirthDate;
+        private Label label13;
+        private TextBox txtEmail;
+        private Label label12;
     }
 }

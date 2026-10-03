@@ -7,6 +7,12 @@
     <Compile Update="UI\Admin\frmCreateRoom.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UI\Admin\Manage HR\frmCreateHR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Admin\Manage HR\frmDeactHR.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UI\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -20,6 +26,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UI\Admin\frmUpdateRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Admin\Manage HR\frmUpdateHR.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

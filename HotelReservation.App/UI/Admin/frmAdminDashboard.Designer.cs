@@ -411,7 +411,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "frmAdminDashboard";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Admin Dashboard";
+            Text = "Admin Dashboard Page";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

@@ -1,6 +1,6 @@
 ﻿namespace HotelReservation.App.UI
 {
-    partial class frmUpdateRoom
+    partial class frmDeactHR
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpdateRoom));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDeactHR));
             panel3 = new Panel();
-            dgvRoomUpdate = new DataGridView();
-            button1 = new Button();
-            panel6 = new Panel();
-            label9 = new Label();
-            btnCreate = new Button();
-            label8 = new Label();
-            label7 = new Label();
-            txtPrice = new TextBox();
-            txtBedType = new TextBox();
-            txtRoomType = new TextBox();
-            label6 = new Label();
-            label4 = new Label();
-            txtRoomNumber = new TextBox();
+            txtHRID = new TextBox();
+            dgvDeac = new DataGridView();
+            btnDeactivate = new Button();
+            btnFind = new Button();
             panel4 = new Panel();
             btnLeave = new Button();
             label3 = new Label();
@@ -57,167 +48,75 @@
             btnManagement = new Button();
             label2 = new Label();
             btnHome = new Button();
+            dgvActive = new DataGridView();
+            label4 = new Label();
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvRoomUpdate).BeginInit();
-            panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvDeac).BeginInit();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvActive).BeginInit();
             SuspendLayout();
             // 
             // panel3
             // 
             panel3.BackColor = Color.LightGray;
-            panel3.Controls.Add(dgvRoomUpdate);
-            panel3.Controls.Add(button1);
-            panel3.Controls.Add(panel6);
-            panel3.Controls.Add(btnCreate);
-            panel3.Controls.Add(label8);
-            panel3.Controls.Add(label7);
-            panel3.Controls.Add(txtPrice);
-            panel3.Controls.Add(txtBedType);
-            panel3.Controls.Add(txtRoomType);
-            panel3.Controls.Add(label6);
+            panel3.Controls.Add(dgvDeac);
             panel3.Controls.Add(label4);
-            panel3.Controls.Add(txtRoomNumber);
+            panel3.Controls.Add(dgvActive);
+            panel3.Controls.Add(txtHRID);
+            panel3.Controls.Add(btnDeactivate);
+            panel3.Controls.Add(btnFind);
             panel3.Controls.Add(panel4);
             panel3.Location = new Point(191, 89);
             panel3.Name = "panel3";
             panel3.Size = new Size(588, 338);
-            panel3.TabIndex = 113;
+            panel3.TabIndex = 121;
             // 
-            // dgvRoomUpdate
+            // txtHRID
             // 
-            dgvRoomUpdate.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvRoomUpdate.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvRoomUpdate.Location = new Point(0, 211);
-            dgvRoomUpdate.Name = "dgvRoomUpdate";
-            dgvRoomUpdate.Size = new Size(588, 127);
-            dgvRoomUpdate.TabIndex = 75;
+            txtHRID.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtHRID.Location = new Point(333, 68);
+            txtHRID.Name = "txtHRID";
+            txtHRID.Size = new Size(166, 25);
+            txtHRID.TabIndex = 92;
             // 
-            // button1
+            // dgvDeac
             // 
-            button1.BackColor = Color.FromArgb(48, 91, 171);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(408, 174);
-            button1.Name = "button1";
-            button1.Size = new Size(79, 31);
-            button1.TabIndex = 74;
-            button1.Text = "REFRESH";
-            button1.UseVisualStyleBackColor = false;
+            dgvDeac.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvDeac.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDeac.Location = new Point(0, 236);
+            dgvDeac.Name = "dgvDeac";
+            dgvDeac.Size = new Size(588, 102);
+            dgvDeac.TabIndex = 75;
             // 
-            // panel6
+            // btnDeactivate
             // 
-            panel6.BackColor = Color.FromArgb(19, 52, 113);
-            panel6.Controls.Add(label9);
-            panel6.Location = new Point(0, 69);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(588, 27);
-            panel6.TabIndex = 73;
+            btnDeactivate.BackColor = Color.FromArgb(192, 0, 0);
+            btnDeactivate.FlatStyle = FlatStyle.Flat;
+            btnDeactivate.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDeactivate.ForeColor = SystemColors.ButtonHighlight;
+            btnDeactivate.Location = new Point(477, 203);
+            btnDeactivate.Name = "btnDeactivate";
+            btnDeactivate.Size = new Size(106, 27);
+            btnDeactivate.TabIndex = 74;
+            btnDeactivate.Text = "DEACTIVATE";
+            btnDeactivate.UseVisualStyleBackColor = false;
             // 
-            // label9
+            // btnFind
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Cambria", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.White;
-            label9.Location = new Point(7, 3);
-            label9.Name = "label9";
-            label9.Size = new Size(125, 20);
-            label9.TabIndex = 74;
-            label9.Text = "UPDATE ROOM";
-            // 
-            // btnCreate
-            // 
-            btnCreate.BackColor = Color.Teal;
-            btnCreate.FlatStyle = FlatStyle.Flat;
-            btnCreate.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCreate.ForeColor = SystemColors.ButtonHighlight;
-            btnCreate.Location = new Point(492, 174);
-            btnCreate.Name = "btnCreate";
-            btnCreate.Size = new Size(79, 31);
-            btnCreate.TabIndex = 72;
-            btnCreate.Text = "UPDATE";
-            btnCreate.UseVisualStyleBackColor = false;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Cambria", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.ForeColor = Color.FromArgb(64, 64, 64);
-            label8.Location = new Point(353, 145);
-            label8.Name = "label8";
-            label8.Size = new Size(54, 20);
-            label8.TabIndex = 71;
-            label8.Text = "Price:";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Cambria", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.FromArgb(64, 64, 64);
-            label7.Location = new Point(320, 109);
-            label7.Name = "label7";
-            label7.Size = new Size(87, 20);
-            label7.TabIndex = 70;
-            label7.Text = "Bed Type:";
-            // 
-            // txtPrice
-            // 
-            txtPrice.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPrice.Location = new Point(405, 143);
-            txtPrice.Name = "txtPrice";
-            txtPrice.Size = new Size(166, 25);
-            txtPrice.TabIndex = 69;
-            // 
-            // txtBedType
-            // 
-            txtBedType.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBedType.Location = new Point(405, 107);
-            txtBedType.Name = "txtBedType";
-            txtBedType.Size = new Size(166, 25);
-            txtBedType.TabIndex = 68;
-            // 
-            // txtRoomType
-            // 
-            txtRoomType.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtRoomType.Location = new Point(148, 141);
-            txtRoomType.Name = "txtRoomType";
-            txtRoomType.Size = new Size(166, 25);
-            txtRoomType.TabIndex = 67;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Cambria", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.FromArgb(64, 64, 64);
-            label6.Location = new Point(46, 143);
-            label6.Name = "label6";
-            label6.Size = new Size(103, 20);
-            label6.TabIndex = 66;
-            label6.Text = "Room Type:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Cambria", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.FromArgb(64, 64, 64);
-            label4.Location = new Point(21, 112);
-            label4.Name = "label4";
-            label4.Size = new Size(128, 20);
-            label4.TabIndex = 65;
-            label4.Text = "Room Number:";
-            // 
-            // txtRoomNumber
-            // 
-            txtRoomNumber.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtRoomNumber.Location = new Point(148, 110);
-            txtRoomNumber.Name = "txtRoomNumber";
-            txtRoomNumber.Size = new Size(166, 25);
-            txtRoomNumber.TabIndex = 1;
+            btnFind.BackColor = Color.Teal;
+            btnFind.FlatStyle = FlatStyle.Flat;
+            btnFind.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnFind.ForeColor = SystemColors.ButtonHighlight;
+            btnFind.Location = new Point(505, 71);
+            btnFind.Name = "btnFind";
+            btnFind.Size = new Size(76, 22);
+            btnFind.TabIndex = 72;
+            btnFind.Text = "FIND";
+            btnFind.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
@@ -241,18 +140,17 @@
             btnLeave.TabIndex = 66;
             btnLeave.Text = "X";
             btnLeave.UseVisualStyleBackColor = false;
-            btnLeave.Click += btnLeave_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Cambria", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(102, 22);
+            label3.Location = new Point(61, 22);
             label3.Name = "label3";
-            label3.Size = new Size(385, 25);
+            label3.Size = new Size(459, 25);
             label3.TabIndex = 65;
-            label3.Text = "INPUT DETAILS YOU WANT TO UPDATE";
+            label3.Text = "CHOOSE ACCOUNT YOU WANT TO DEACTIVATE";
             // 
             // panel5
             // 
@@ -262,7 +160,7 @@
             panel5.Margin = new Padding(3, 2, 3, 2);
             panel5.Name = "panel5";
             panel5.Size = new Size(631, 24);
-            panel5.TabIndex = 112;
+            panel5.TabIndex = 120;
             // 
             // label5
             // 
@@ -271,9 +169,9 @@
             label5.ForeColor = Color.FromArgb(64, 64, 64);
             label5.Location = new Point(5, 5);
             label5.Name = "label5";
-            label5.Size = new Size(169, 14);
+            label5.Size = new Size(216, 28);
             label5.TabIndex = 64;
-            label5.Text = "ROOM BOARD MANAGEMENT";
+            label5.Text = "HOTEL RECEPTIONIST MANAGEMENT\r\n\r\n";
             // 
             // panel2
             // 
@@ -284,7 +182,7 @@
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
             panel2.Size = new Size(805, 48);
-            panel2.TabIndex = 111;
+            panel2.TabIndex = 119;
             // 
             // label1
             // 
@@ -322,7 +220,7 @@
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
             panel1.Size = new Size(168, 405);
-            panel1.TabIndex = 110;
+            panel1.TabIndex = 118;
             // 
             // btnLogout
             // 
@@ -337,7 +235,6 @@
             btnLogout.TabIndex = 9;
             btnLogout.Text = "LOGOUT";
             btnLogout.UseVisualStyleBackColor = false;
-            btnLogout.Click += btnLogout_Click;
             // 
             // btnMyAccount
             // 
@@ -366,7 +263,6 @@
             btnManagement.TabIndex = 7;
             btnManagement.Text = "MANAGEMENT";
             btnManagement.UseVisualStyleBackColor = false;
-            btnManagement.Click += btnManagement_Click;
             // 
             // label2
             // 
@@ -392,9 +288,28 @@
             btnHome.TabIndex = 5;
             btnHome.Text = "HOME";
             btnHome.UseVisualStyleBackColor = false;
-            btnHome.Click += btnHome_Click;
             // 
-            // frmUpdateRoom
+            // dgvActive
+            // 
+            dgvActive.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvActive.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvActive.Location = new Point(0, 95);
+            dgvActive.Name = "dgvActive";
+            dgvActive.Size = new Size(588, 102);
+            dgvActive.TabIndex = 93;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Cambria", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.FromArgb(19, 52, 113);
+            label4.Location = new Point(2, 213);
+            label4.Name = "label4";
+            label4.Size = new Size(323, 25);
+            label4.TabIndex = 94;
+            label4.Text = "DEACTIVATE ACCOUNT HISTORY";
+            // 
+            // frmDeactHR
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -403,14 +318,11 @@
             Controls.Add(panel5);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Name = "frmUpdateRoom";
-            StartPosition = FormStartPosition.CenterScreen;
+            Name = "frmDeactHR";
             Text = "Admin Management Page";
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvRoomUpdate).EndInit();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvDeac).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             panel5.ResumeLayout(false);
@@ -420,23 +332,17 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvActive).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel3;
-        private Panel panel6;
-        private Label label9;
-        private Button btnCreate;
-        private Label label8;
-        private Label label7;
-        private TextBox txtPrice;
-        private TextBox txtBedType;
-        private TextBox txtRoomType;
-        private Label label6;
-        private Label label4;
-        private TextBox txtRoomNumber;
+        private TextBox txtHRID;
+        private DataGridView dgvDeac;
+        private Button btnDeactivate;
+        private Button btnFind;
         private Panel panel4;
         private Button btnLeave;
         private Label label3;
@@ -451,7 +357,7 @@
         private Button btnManagement;
         private Label label2;
         private Button btnHome;
-        private Button button1;
-        private DataGridView dgvRoomUpdate;
+        private Label label4;
+        private DataGridView dgvActive;
     }
 }
