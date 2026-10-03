@@ -4,7 +4,7 @@
     <Compile Update="UI\Admin\frmAdminManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="UI\Admin\frmCreateRoom.cs">
+    <Compile Update="UI\Admin\Manage Room\frmCreateRoom.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UI\Admin\Manage HR\frmCreateHR.cs">
@@ -25,7 +25,7 @@
     <Compile Update="UI\frmReceptionistDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="UI\Admin\frmUpdateRoom.cs">
+    <Compile Update="UI\Admin\Manage Room\frmUpdateRoom.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UI\Admin\Manage HR\frmUpdateHR.cs">
