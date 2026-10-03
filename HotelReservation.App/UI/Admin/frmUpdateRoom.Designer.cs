@@ -30,11 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpdateRoom));
             panel3 = new Panel();
+            cmbRoomNumber = new ComboBox();
             dgvRoomUpdate = new DataGridView();
-            button1 = new Button();
+            btnRefresh = new Button();
             panel6 = new Panel();
             label9 = new Label();
-            btnCreate = new Button();
+            btnUpdate = new Button();
             label8 = new Label();
             label7 = new Label();
             txtPrice = new TextBox();
@@ -42,7 +43,6 @@
             txtRoomType = new TextBox();
             label6 = new Label();
             label4 = new Label();
-            txtRoomNumber = new TextBox();
             panel4 = new Panel();
             btnLeave = new Button();
             label3 = new Label();
@@ -70,10 +70,11 @@
             // panel3
             // 
             panel3.BackColor = Color.LightGray;
+            panel3.Controls.Add(cmbRoomNumber);
             panel3.Controls.Add(dgvRoomUpdate);
-            panel3.Controls.Add(button1);
+            panel3.Controls.Add(btnRefresh);
             panel3.Controls.Add(panel6);
-            panel3.Controls.Add(btnCreate);
+            panel3.Controls.Add(btnUpdate);
             panel3.Controls.Add(label8);
             panel3.Controls.Add(label7);
             panel3.Controls.Add(txtPrice);
@@ -81,12 +82,20 @@
             panel3.Controls.Add(txtRoomType);
             panel3.Controls.Add(label6);
             panel3.Controls.Add(label4);
-            panel3.Controls.Add(txtRoomNumber);
             panel3.Controls.Add(panel4);
             panel3.Location = new Point(191, 89);
             panel3.Name = "panel3";
             panel3.Size = new Size(588, 338);
             panel3.TabIndex = 113;
+            // 
+            // cmbRoomNumber
+            // 
+            cmbRoomNumber.FormattingEnabled = true;
+            cmbRoomNumber.Location = new Point(148, 108);
+            cmbRoomNumber.Name = "cmbRoomNumber";
+            cmbRoomNumber.Size = new Size(166, 23);
+            cmbRoomNumber.TabIndex = 76;
+            cmbRoomNumber.SelectedIndexChanged += cmbRoomNumber_SelectedIndexChanged;
             // 
             // dgvRoomUpdate
             // 
@@ -97,18 +106,19 @@
             dgvRoomUpdate.Size = new Size(588, 127);
             dgvRoomUpdate.TabIndex = 75;
             // 
-            // button1
+            // btnRefresh
             // 
-            button1.BackColor = Color.FromArgb(48, 91, 171);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(408, 174);
-            button1.Name = "button1";
-            button1.Size = new Size(79, 31);
-            button1.TabIndex = 74;
-            button1.Text = "REFRESH";
-            button1.UseVisualStyleBackColor = false;
+            btnRefresh.BackColor = Color.FromArgb(48, 91, 171);
+            btnRefresh.FlatStyle = FlatStyle.Flat;
+            btnRefresh.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRefresh.ForeColor = SystemColors.ButtonHighlight;
+            btnRefresh.Location = new Point(408, 174);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(79, 31);
+            btnRefresh.TabIndex = 74;
+            btnRefresh.Text = "REFRESH";
+            btnRefresh.UseVisualStyleBackColor = false;
+            btnRefresh.Click += btnRefresh_Click;
             // 
             // panel6
             // 
@@ -130,18 +140,19 @@
             label9.TabIndex = 74;
             label9.Text = "UPDATE ROOM";
             // 
-            // btnCreate
+            // btnUpdate
             // 
-            btnCreate.BackColor = Color.Teal;
-            btnCreate.FlatStyle = FlatStyle.Flat;
-            btnCreate.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCreate.ForeColor = SystemColors.ButtonHighlight;
-            btnCreate.Location = new Point(492, 174);
-            btnCreate.Name = "btnCreate";
-            btnCreate.Size = new Size(79, 31);
-            btnCreate.TabIndex = 72;
-            btnCreate.Text = "UPDATE";
-            btnCreate.UseVisualStyleBackColor = false;
+            btnUpdate.BackColor = Color.Teal;
+            btnUpdate.FlatStyle = FlatStyle.Flat;
+            btnUpdate.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnUpdate.ForeColor = SystemColors.ButtonHighlight;
+            btnUpdate.Location = new Point(492, 174);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(79, 31);
+            btnUpdate.TabIndex = 72;
+            btnUpdate.Text = "UPDATE";
+            btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // label8
             // 
@@ -210,14 +221,6 @@
             label4.Size = new Size(128, 20);
             label4.TabIndex = 65;
             label4.Text = "Room Number:";
-            // 
-            // txtRoomNumber
-            // 
-            txtRoomNumber.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtRoomNumber.Location = new Point(148, 110);
-            txtRoomNumber.Name = "txtRoomNumber";
-            txtRoomNumber.Size = new Size(166, 25);
-            txtRoomNumber.TabIndex = 1;
             // 
             // panel4
             // 
@@ -406,6 +409,7 @@
             Name = "frmUpdateRoom";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Admin Management Page";
+            Load += frmUpdateRoom_Load;
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvRoomUpdate).EndInit();
@@ -428,7 +432,7 @@
         private Panel panel3;
         private Panel panel6;
         private Label label9;
-        private Button btnCreate;
+        private Button btnUpdate;
         private Label label8;
         private Label label7;
         private TextBox txtPrice;
@@ -436,7 +440,6 @@
         private TextBox txtRoomType;
         private Label label6;
         private Label label4;
-        private TextBox txtRoomNumber;
         private Panel panel4;
         private Button btnLeave;
         private Label label3;
@@ -451,7 +454,8 @@
         private Button btnManagement;
         private Label label2;
         private Button btnHome;
-        private Button button1;
+        private Button btnRefresh;
         private DataGridView dgvRoomUpdate;
+        private ComboBox cmbRoomNumber;
     }
 }

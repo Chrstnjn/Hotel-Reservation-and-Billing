@@ -45,15 +45,12 @@
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
-            lblHrDetails = new Label();
             label6 = new Label();
             label7 = new Label();
             label8 = new Label();
-            lblTotalRoom = new Label();
-            lblTotalBooked = new Label();
             btnSearch = new Button();
             pictureBox5 = new PictureBox();
-            dvgRoom = new DataGridView();
+            dgvHR = new DataGridView();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -61,7 +58,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dvgRoom).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvHR).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -217,6 +214,7 @@
             btnTotalRoom.Size = new Size(197, 44);
             btnTotalRoom.TabIndex = 8;
             btnTotalRoom.UseVisualStyleBackColor = false;
+            btnTotalRoom.Click += btnTotalRoom_Click;
             // 
             // txtSearch
             // 
@@ -272,25 +270,13 @@
             pictureBox4.TabIndex = 12;
             pictureBox4.TabStop = false;
             // 
-            // lblHrDetails
-            // 
-            lblHrDetails.AutoSize = true;
-            lblHrDetails.BackColor = Color.White;
-            lblHrDetails.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblHrDetails.ForeColor = Color.FromArgb(19, 52, 113);
-            lblHrDetails.Location = new Point(242, 80);
-            lblHrDetails.Name = "lblHrDetails";
-            lblHrDetails.Size = new Size(18, 20);
-            lblHrDetails.TabIndex = 14;
-            lblHrDetails.Text = "0";
-            // 
             // label6
             // 
             label6.AutoSize = true;
             label6.BackColor = Color.White;
             label6.Font = new Font("Constantia", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.FromArgb(102, 108, 130);
-            label6.Location = new Point(233, 68);
+            label6.Location = new Point(233, 78);
             label6.Name = "label6";
             label6.Size = new Size(135, 13);
             label6.TabIndex = 17;
@@ -302,7 +288,7 @@
             label7.BackColor = Color.White;
             label7.Font = new Font("Constantia", 7.8F, FontStyle.Bold);
             label7.ForeColor = Color.FromArgb(102, 108, 130);
-            label7.Location = new Point(440, 68);
+            label7.Location = new Point(440, 78);
             label7.Name = "label7";
             label7.Size = new Size(81, 13);
             label7.TabIndex = 18;
@@ -314,35 +300,11 @@
             label8.BackColor = Color.White;
             label8.Font = new Font("Constantia", 7.8F, FontStyle.Bold);
             label8.ForeColor = Color.FromArgb(102, 108, 130);
-            label8.Location = new Point(642, 68);
+            label8.Location = new Point(642, 78);
             label8.Name = "label8";
             label8.Size = new Size(94, 13);
             label8.TabIndex = 19;
             label8.Text = "TOTAL BOOKED";
-            // 
-            // lblTotalRoom
-            // 
-            lblTotalRoom.AutoSize = true;
-            lblTotalRoom.BackColor = Color.White;
-            lblTotalRoom.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalRoom.ForeColor = Color.FromArgb(19, 52, 113);
-            lblTotalRoom.Location = new Point(451, 80);
-            lblTotalRoom.Name = "lblTotalRoom";
-            lblTotalRoom.Size = new Size(18, 20);
-            lblTotalRoom.TabIndex = 20;
-            lblTotalRoom.Text = "0";
-            // 
-            // lblTotalBooked
-            // 
-            lblTotalBooked.AutoSize = true;
-            lblTotalBooked.BackColor = Color.White;
-            lblTotalBooked.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalBooked.ForeColor = Color.FromArgb(19, 52, 113);
-            lblTotalBooked.Location = new Point(651, 80);
-            lblTotalBooked.Name = "lblTotalBooked";
-            lblTotalBooked.Size = new Size(18, 20);
-            lblTotalBooked.TabIndex = 21;
-            lblTotalBooked.Text = "0";
             // 
             // btnSearch
             // 
@@ -376,29 +338,26 @@
             pictureBox5.TabIndex = 23;
             pictureBox5.TabStop = false;
             // 
-            // dvgRoom
+            // dgvHR
             // 
-            dvgRoom.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dvgRoom.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dvgRoom.Location = new Point(183, 164);
-            dvgRoom.Name = "dvgRoom";
-            dvgRoom.Size = new Size(605, 274);
-            dvgRoom.TabIndex = 24;
+            dgvHR.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvHR.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvHR.Location = new Point(183, 164);
+            dgvHR.Name = "dgvHR";
+            dgvHR.Size = new Size(605, 274);
+            dgvHR.TabIndex = 24;
             // 
             // frmAdminDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(dvgRoom);
+            Controls.Add(dgvHR);
             Controls.Add(pictureBox5);
             Controls.Add(btnSearch);
-            Controls.Add(lblTotalBooked);
-            Controls.Add(lblTotalRoom);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);
-            Controls.Add(lblHrDetails);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
@@ -421,7 +380,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dvgRoom).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvHR).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -453,6 +412,6 @@
         private Label lblTotalBooked;
         private Button btnSearch;
         private PictureBox pictureBox5;
-        private DataGridView dvgRoom;
+        private DataGridView dgvHR;
     }
 }

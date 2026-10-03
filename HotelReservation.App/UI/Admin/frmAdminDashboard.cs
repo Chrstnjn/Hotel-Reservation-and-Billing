@@ -1,4 +1,5 @@
-﻿using HotelReservation.App.UI;
+﻿using HotelReservation.App.BusinessLogic.Controller;
+using HotelReservation.App.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,6 +36,14 @@ namespace HotelReservation.App
                 loginForm.Show();
                 this.Close();
             }
+        }
+
+        private void btnTotalRoom_Click(object sender, EventArgs e)
+        {
+            RoomController controller = new RoomController();
+
+            dgvHR.DataSource = null;
+            dgvHR.DataSource = controller.GetRooms();
         }
     }
 }
