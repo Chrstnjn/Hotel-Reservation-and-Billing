@@ -386,9 +386,9 @@
             label8.ForeColor = Color.FromArgb(64, 64, 64);
             label8.Location = new Point(5, 5);
             label8.Name = "label8";
-            label8.Size = new Size(213, 14);
+            label8.Size = new Size(216, 14);
             label8.TabIndex = 64;
-            label8.Text = "HOTEL RECEPTIONISTMANAGEMENT";
+            label8.Text = "HOTEL RECEPTIONIST MANAGEMENT";
             // 
             // label9
             // 
