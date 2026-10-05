@@ -1,6 +1,6 @@
-﻿namespace HotelReservation.App.Model
+﻿namespace HotelReservation.Model
 {
-    internal class UserModel
+    public class UserModel
     {
         public long UserID { get; set; }
         public string Username { get; set; }

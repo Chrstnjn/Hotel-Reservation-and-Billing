@@ -1,4 +1,4 @@
-﻿using HotelReservation.App.Model;
+﻿using HotelReservation.Model;
 using Microsoft.Data.SqlClient;
 
 namespace HotelReservation.App.BusinessLogic.Repository
@@ -7,7 +7,7 @@ namespace HotelReservation.App.BusinessLogic.Repository
     {
         private readonly SqlConnection conn = new SqlConnection(
           @"Data Source=CHRISTINE-LAPUZ\SQLEXPRESS;
-          Initial Catalog=HotelReservationDB;
+          Initial Catalog=HotelReservationSystemDB;
           Integrated Security=True;
           TrustServerCertificate=True");
 

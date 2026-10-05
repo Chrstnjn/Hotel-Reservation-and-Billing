@@ -1,5 +1,5 @@
 ﻿using HotelReservation.App.BusinessLogic.Controller;
-using HotelReservation.App.Model;
+using HotelReservation.Model;
 
 namespace HotelReservation.App.UI
 {

@@ -1,6 +1,6 @@
-﻿namespace HotelReservation.App.Model
+﻿namespace HotelReservation.Model
 {
-    internal class ReceptionistAccountModel
+    public class ReceptionistAccountModel
     {
         public int HRID { get; set; }
 
