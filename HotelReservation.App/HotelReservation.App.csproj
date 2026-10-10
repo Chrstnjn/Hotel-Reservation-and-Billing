@@ -30,10 +30,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.1.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.1.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\HotelReservation.Businesslogic\HotelReservation.Businesslogic.csproj" />
     <ProjectReference Include="..\HotelReservation.Model\HotelReservation.Model.csproj" />
   </ItemGroup>
 
