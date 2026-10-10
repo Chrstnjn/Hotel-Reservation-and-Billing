@@ -282,6 +282,7 @@
             label6.Size = new Size(135, 13);
             label6.TabIndex = 17;
             label6.Text = "RESEPTIONIST DETAILS";
+            label6.Click += label6_Click;
             // 
             // label7
             // 

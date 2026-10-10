@@ -1,12 +1,6 @@
 ﻿using HotelReservation.App.BusinessLogic.Controller;
 using HotelReservation.App.UI;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
+
 
 namespace HotelReservation.App
 {
@@ -52,6 +46,11 @@ namespace HotelReservation.App
 
             dgvHR.DataSource = null;
             dgvHR.DataSource = controller.GetAllHR();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
