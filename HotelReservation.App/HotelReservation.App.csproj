@@ -34,6 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\HotelReservation.Businesslogic\HotelReservation.Businesslogic.csproj" />
     <ProjectReference Include="..\HotelReservation.Model\HotelReservation.Model.csproj" />
   </ItemGroup>
 

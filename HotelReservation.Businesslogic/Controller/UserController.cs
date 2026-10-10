@@ -3,7 +3,7 @@ using HotelReservation.Model;
 
 namespace HotelReservation.App.BusinessLogic.Controller
 {
-    internal class UserController
+    public class UserController
     {
         private readonly UserRepository repo = new UserRepository();
 

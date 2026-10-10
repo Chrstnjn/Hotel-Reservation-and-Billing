@@ -4,7 +4,7 @@ using System.Data;
 
 namespace HotelReservation.App.BusinessLogic.Controller
 {
-    internal class ReceptionistAccountController
+    public class ReceptionistAccountController
     {
         private readonly ReceptionistAccountRepository repo = new ReceptionistAccountRepository();
 
